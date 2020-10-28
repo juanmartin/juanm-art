@@ -7,7 +7,7 @@ import { rhythm } from "../utils/typography"
 
 type PageContext = {
   currentPage: number
-  numPagesPosts: number
+  numPagesProjects: number
 }
 type Data = {
   site: {
@@ -32,26 +32,23 @@ type Data = {
   }
 }
 
-const BlogIndex = ({
+const ProjectIndex = ({
   data,
   location,
   pageContext,
 }: PageProps<Data, PageContext>) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  const { currentPage, numPagesPosts } = pageContext
+  const { currentPage, numPagesProjects } = pageContext
 
   const isFirst = currentPage === 1
-  const isLast = currentPage === numPagesPosts
-  const prevPage =
-    currentPage - 1 === 1 ? ".." : "../" + (currentPage - 1).toString()
-  const nextPage = isFirst
-    ? "./" + (currentPage + 1).toString()
-    : "../" + (currentPage + 1).toString()
+  const isLast = currentPage === numPagesProjects
+  const prevPage = currentPage - 1 === 1 ? "/projects" : "/projects/" + (currentPage - 1).toString()
+  const nextPage = isFirst ? "./" + (currentPage + 1).toString() : "../" + (currentPage + 1).toString()
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -64,7 +61,7 @@ const BlogIndex = ({
               >
                 <Link
                   style={{ boxShadow: `none` }}
-                  to={ isFirst ? "." + node.fields.slug : ".." + node.fields.slug }
+                  to={isFirst ? "." + node.fields.slug : ".." + node.fields.slug}
                 >
                   {title}
                 </Link>
@@ -101,7 +98,7 @@ const BlogIndex = ({
           </li>
           <li>
             {!isLast && (
-              <Link to={nextPage} rel="next">
+              <Link to={"../" + nextPage} rel="next">
                 Next Page →
               </Link>
             )}
@@ -112,17 +109,17 @@ const BlogIndex = ({
   )
 }
 
-export default BlogIndex
+export default ProjectIndex
 
 export const pageQuery = graphql`
-  query blogPageQuery($skip: Int!, $limit: Int!) {
+  query projectPageQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip

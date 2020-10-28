@@ -7,16 +7,16 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { siteMetadata } from "../../gatsby-config"
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
+const PageTemplate = ({ data, pageContext, location }) => {
+  const page = data.markdownRemark
   // const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+  // const { previous, next } = pageContext
 
   return (
     <Layout location={location} title={siteMetadata.title}>
       <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={page.frontmatter.title}
+        description={page.frontmatter.description || page.excerpt}
       />
       <article>
         <header>
@@ -25,19 +25,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            {page.frontmatter.title}
           </h1>
-          <p
+          {/* <p
             style={{
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
-          </p>
+            {page.frontmatter.date}
+          </p> */}
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section dangerouslySetInnerHTML={{ __html: page.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -48,40 +48,14 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </footer>
       </article>
 
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={".." + previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={".." + next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   )
 }
 
-export default BlogPostTemplate
+export default PageTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query PageBySlug($slug: String!) {
     site {
       siteMetadata {
         title

@@ -1,12 +1,81 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useEffect } from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { scale } from "../utils/typography"
+import { scale, rhythm } from "../utils/typography"
+// import { jsx, useColorMode } from "theme-ui"
+import Typed from "typed.js"
 
 import Footer from "./footer"
+import Navbar from "./Navbar"
+import SocialIcons from "./SocialIcons"
 import "./global.css"
 
+// const DarkModeAvatar = () => {
+//   const data = useStaticQuery(graphql`
+//   {
+//     avatar: file(absolutePath: {regex: "/website-icon.png/"}) {
+//       childImageSharp {
+//         fixed(width: 150, height: 150) {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//     avatarDark: file(absolutePath: {regex: "/website-icon.png/"}) {
+//       childImageSharp {
+//         fixed(width: 150, height: 150,
+//           duotone: {
+//             highlight: "#000000",
+//             shadow: "#FFFFFF"
+//           }) {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//   }
+//   `)
+// }
+
 const Layout = ({ location, title, children }) => {
+  const data = useStaticQuery(graphql`
+    {
+      avatar: file(absolutePath: { regex: "/website-icon.png/" }) {
+        childImageSharp {
+          fixed(width: 150, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      avatarDark: file(absolutePath: { regex: "/website-icon.png/" }) {
+        childImageSharp {
+          fixed(
+            width: 150
+            height: 150
+            duotone: { highlight: "#000000", shadow: "#FFFFFF" }
+          ) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+            email
+          }
+          social {
+            twitter
+            instagram
+            soundcloud
+            github
+          }
+        }
+      }
+    }
+  `)
+
+  var isDark = false
   const toggle = (
     <ThemeToggler>
       {({ toggleTheme, theme }) => {
@@ -18,7 +87,7 @@ const Layout = ({ location, title, children }) => {
         return (
           <button
             aria-label="theme-switch"
-            className="leading-none p-1"
+            className="leading-none"
             onClick={() => toggleTheme(isDarkMode ? "light" : "dark")}
           >
             {isDarkMode ? (
@@ -56,27 +125,54 @@ const Layout = ({ location, title, children }) => {
     </ThemeToggler>
   )
 
+  useEffect(() => {
+    const typedOpts = {
+      strings: ["juanm.art/in ", "Juan Martin"],
+      typeSpeed: 80,
+      backSpeed: 80,
+      startDelay: 1000,
+      backDelay: 1000,
+      smartBackspace: true,
+      showCursor: false,
+    }
+    const tipi = new Typed(".nombreTipeado", typedOpts)
+    return () => {
+      tipi.destroy()
+    }
+  }, [])
+
   const header = (
     <>
-      {toggle}
-      <h2
+      <Link
         style={{
-          ...scale(1),
-          marginBottom: 0,
-          marginTop: 0,
-          fontFamily: `Montserrat, sans-serif`,
+          boxShadow: `none`,
+          color: `inherit`,
         }}
+        to={`/`}
       >
-        <Link
+        <Img
+          fixed={
+            isDark
+              ? data.avatarDark.childImageSharp.fixed
+              : data.avatar.childImageSharp.fixed
+          }
+          alt={data.site.siteMetadata.author.name}
           style={{
-            boxShadow: `none`,
-            color: `inherit`,
+            marginRight: rhythm(1 / 2),
+            marginBottom: 20,
+            minWidth: 150,
+            borderRadius: `100%`,
           }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h2>
+          imgStyle={{
+            borderRadius: `50%`,
+          }}
+        />
+        <h2 style={{ ...scale(1), lineHeight: 1.2 }} className="titulo">
+          <span className="nombreTipeado">juanm.art/in</span>
+          <br />
+          Sesali Maydana
+        </h2>
+      </Link>
     </>
   )
 
@@ -85,16 +181,23 @@ const Layout = ({ location, title, children }) => {
       style={{
         backgroundColor: "var(--bg)",
         color: "var(--textNormal)",
-        transition: "color 0.2s ease-out, background 0.2s ease-out",
+        transition: "color 0.2s ease-out, background 0s ease-out",
         minHeight: "100vh",
       }}
     >
       <div className="sidebar">
         <div
           className="md:h-screen p-4 flex flex-col justify-center items-center"
-          style={{ minHeight: 200 }}
         >
           {header}
+          <div className="mt-5 mb-1">
+            <Navbar />
+          </div>
+          {toggle}
+
+          <div className="mt-5">
+            <SocialIcons />
+          </div>
         </div>
       </div>
 

@@ -1,0 +1,66 @@
+---
+title: About
+date: "2020-10-26T07:26:03.284Z"
+description: "Acerca de mi."
+categories: [about]
+comments: false
+---
+
+&nbsp;
+
+`Bueno welcome to my página. Voy a combinar mucho inglés-español o elegir arbitrariamente. Deal with it! xD. Cuando era chico flasheaba armar un idioma que combine "lo mejor" de todos (???).`
+
+Soy un jóven sensible entuasiasta de la técnica. Aplicado a las artes y la tecnología. Mis principales actividades son la **producción musical** y el desarrollo de **soluciones tecnológicas** utilizando diversas herramientas... en fin **programo y me llevo muy bien con el hardware**.
+
+![Juan desde el drone][foto dron]
+*Selfie tomada desde mi drone en [Estudio Saurio](https://www.instagram.com/sauriogram/)*.
+
+> **DISCLAIMER** 
+> 
+> Este sitio es un **Work in Progress** pero estaba manija por largarlo. Voy a ir sumando contenido. Juntar toooda la data de todo lo que fui haciendo no va a ser fácil, creo que es un camino. **Me va a hacer bien, ya lo siento. Recomiendo**.
+
+---
+
+## WORK
+
+Nowadays I'm a freelance developer. I make **"tech solutions"**. Usually they involve programming. I *really* do my research, learn whatever tools are needed and choose those **optimal** for the job.
+
+I enjoy working with systems, ssh'ing to servers, configuring Raspberry Pi's, syncing MIDI instruments, deploying a big soundsystem and playing music on it, using some Arduino's[^1] to create stuff with motors, lights and controlling them with some sensors, projecting generative visuals for live performances, you name it, I'll do it with a smile in my face =)
+
+Before, I used to work as a **graphic designer** since 2011 since my family had a small [communication company](https://www.landgraphic.com). Learned the Adobe pack really well, specially Illustrator and InDesign, and of course Photoshop. Mainly printed stuff. It was fun!
+
+Sometimes I still help with some artworks now and then but the pandemic really messed their line of work (mainly events).
+
+I worked from mid 2014 to early 2019 in a [research team](https://www.intercambiostransorganicos.org) with university mates (now beloved friends <3). It's quite interesting, you should check it. I left to persue a different path.
+
+
+<!-- ![Juan entrando a su casa luego de andar mucho en bici][foto bici] -->
+
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3dHMTnvWs8tHpDYSvcY-QD2t9k-wZIlE31lhavnMoKVR81mQ-7yujuUocffjRJ1W2Z-y5FUs9LOV02CpcTGiBe94I6cDFWEkYmlHB9NAcy38WNKDz0OPAKweJIN6QbS4PyOdxJd6xk8G8MOT7n7JUbxqg=w703-h937-no " width=100%>
+
+*Juan entrando al edificio luego de andar re cebado con la bici.*
+
+---
+## ACADEMIA
+- ### Licenciatura en Artes Electrónicas
+  - [UNTREF](http://untref.edu.ar/) (2014 - actual)
+
+- ### Ingeniería en Informática
+  - [UADE](http://uade.edu.ar/) (2012 - 2013)
+  - [ITBA](http://itba.edu.ar/) (2010 - 2011)
+
+My academic path is still ongoing. In 2013 I decided I wanted to pursue a more artistic road, so I left engineering and went on studying arts with a twist, a *techie* twist, and my mother found there was an Electronic Arts carreer with a full degree (carrera de grado, not sure about academic degree translations), and went right in!
+
+
+![Multi Juan][foto multijuan]
+*Múltiples JuanesMartines*
+
+
+
+[^1]: I never liked apostrophes being used to pluralize stuff but how else can you separate an **s**?
+
+[foto dron]: https://lh3.googleusercontent.com/pw/ACtC-3diWk-HZ7xC55XF4edQ3o5CtB-0GtjxL7TyvSybE8GvFRJTPKwfKHjxA-ETwkPOPepWAm8MRCf3F8_VfR6noC7FS_DbIoGHHRjHTN0P7OSuLcUhb1KTCyHJ1v1_176Z_UGtrrC8jTSpHWb2Mh4ANHssIA=w1280-h713-no "Juan desde el drone"
+
+[foto bici]: https://lh3.googleusercontent.com/pw/ACtC-3dHMTnvWs8tHpDYSvcY-QD2t9k-wZIlE31lhavnMoKVR81mQ-7yujuUocffjRJ1W2Z-y5FUs9LOV02CpcTGiBe94I6cDFWEkYmlHB9NAcy38WNKDz0OPAKweJIN6QbS4PyOdxJd6xk8G8MOT7n7JUbxqg=w703-h937-no "Juan cebado por andar en bici"
+
+[foto multijuan]: https://lh3.googleusercontent.com/pw/ACtC-3e26GDjHQKfaWeWSNzd7OeZsJIRzQUyoaKHnNVn41HJmA_IWn3h9UolXk1w_ytyrCUeUhlxOGzzfetXANTo9pg2K58trXTM8MVEQtgnE6a6N1JCVs87NWKDJheBXTqIDPHTiQaypsCBy6QOFnWcevG_Fw=w1920-h428-no "multi juan"

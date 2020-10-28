@@ -1,15 +1,19 @@
 module.exports = {
-  pathPrefix: "/leonids",
+  pathPrefix: "/in",
   siteMetadata: {
-    title: `Leonids`,
+    title: `Juan Martin SM`,
     author: {
-      name: `@ry_zou`,
-      summary: `web dev`,
+      name: `@jaunmatrin`,
+      summary: `músico, nerd`,
+      email: `juanmartinsesali@gmail.com`
     },
-    description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
-    siteUrl: `https://renyuanz.github.io/leonids`,
+    description: `Cyber-Territorio Personal.`,
+    siteUrl: `https://juanm.art/`,
     social: {
-      twitter: `ry_zou`,
+      twitter: `jaunmatrin`,
+      instagram: `jaunmatrin`,
+      soundcloud: `sesali`,
+      github: `juanmartin`,
     },
     defaultImage: "images/bg.jpeg",
   },
@@ -26,6 +30,20 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/projects`,
+        name: `projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `pages`,
       },
     },
     {
@@ -51,24 +69,29 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: `content/assets/website-icon.png`
+      }
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-62251910-1`,
+        trackingId: `G-Y6BJYCPVZ8`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryz`,
-        short_name: `Ryz`,
-        start_url: `/`,
+        name: `Juan Martin SM`,
+        short_name: `JMSM`,
+        start_url: `/in`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ff4967`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/website-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
