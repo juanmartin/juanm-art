@@ -8,7 +8,7 @@ comments: true
 
 ## OK, now in English.
 
-Sometimes I even think in English. I'm a native Spanish speaker since I'm argentinian, but I was sent to a bilingual school since very young so I feel English as a mother language too. The tech industry is primarily English-driven so lots of documentation is written in this language. I don't know, it just felt that reading docs in Spanish seemed to be like a second-hand-version-translated of Enlish ones, and I just wanted to read the original source.
+Sometimes I even think in English. I'm a native Spanish speaker since I'm argentinian, but I was sent to a bilingual school since very young so I feel English as a mother language too. The tech industry seems to be primarily English-driven so lots of documentation is written in this language. It just felt that learning from docs in Spanish was like reading second-hand-translated-versions of Enlish ones, and I just wanted to read the original source. *Kind of watching movies with their original language audio.*
 
 ## Web
 I'll repeat myself a bit here since the first blog post was written in Spanish.
@@ -31,3 +31,4 @@ The future of the web? [JAMstack](https://jamstack.org/) they call it, OK, fine,
 Where you are now is my second try. I used [Leonids](https://github.com/renyuanz/leonids) Gatsby Starter and modified it to my needs. I tried a few but this one was the best for my needs, even though I had to expand it a bit (still being a **WIP**) but what I liked the most is the fact that it doesn't contain much boilerplate, so it was easy to get started.
 
 ...
+Sorry it's late y estoy re quemado. Stay tuned for more tech tips about how I put this together.
