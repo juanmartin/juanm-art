@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b8a36fdf-6ee8-4f32-aa5c-c52251ea5c64/deploy-status)](https://app.netlify.com/sites/juanm-art/deploys)
+
 # Personal Cyber Territory of Juan Martin
 
 ## TODO
