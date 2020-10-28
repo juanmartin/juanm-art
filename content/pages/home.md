@@ -36,9 +36,8 @@ I worked from mid 2014 to early 2019 in a [research team](https://www.intercambi
 
 <!-- ![Juan entrando a su casa luego de andar mucho en bici][foto bici] -->
 
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3dHMTnvWs8tHpDYSvcY-QD2t9k-wZIlE31lhavnMoKVR81mQ-7yujuUocffjRJ1W2Z-y5FUs9LOV02CpcTGiBe94I6cDFWEkYmlHB9NAcy38WNKDz0OPAKweJIN6QbS4PyOdxJd6xk8G8MOT7n7JUbxqg=w703-h937-no " width=100%>
-
-*Juan entrando al edificio luego de andar re cebado con la bici.*
+![Juan Frontera][foto frontera]
+*Juan sosteniendo la Triple Frontera de Argentina-Paraguay-Brasil.*
 
 ---
 ## ACADEMIA
@@ -61,6 +60,6 @@ My academic path is still ongoing. In 2013 I decided I wanted to pursue a more a
 
 [foto dron]: https://lh3.googleusercontent.com/pw/ACtC-3diWk-HZ7xC55XF4edQ3o5CtB-0GtjxL7TyvSybE8GvFRJTPKwfKHjxA-ETwkPOPepWAm8MRCf3F8_VfR6noC7FS_DbIoGHHRjHTN0P7OSuLcUhb1KTCyHJ1v1_176Z_UGtrrC8jTSpHWb2Mh4ANHssIA=w1280-h713-no "Juan desde el drone"
 
-[foto bici]: https://lh3.googleusercontent.com/pw/ACtC-3dHMTnvWs8tHpDYSvcY-QD2t9k-wZIlE31lhavnMoKVR81mQ-7yujuUocffjRJ1W2Z-y5FUs9LOV02CpcTGiBe94I6cDFWEkYmlHB9NAcy38WNKDz0OPAKweJIN6QbS4PyOdxJd6xk8G8MOT7n7JUbxqg=w703-h937-no "Juan cebado por andar en bici"
+[foto frontera]: https://lh3.googleusercontent.com/pw/ACtC-3dTYMLxSMsLfRb5Oyob5BBNNE5dh-tc3Xk1ONDf7f6qmBHq1eIgVTDMouRKW-qvKPDajTEOr-nCntyZCTkTyq-20UhD4FOXAaN7iRlfo9SjgPn8YGxp5X3kCTrEZ3PmTGv3-nLFPe0Ct9oifZrcvq6LWg=w703-h937-no "Juan en la triple frontera"
 
 [foto multijuan]: https://lh3.googleusercontent.com/pw/ACtC-3e26GDjHQKfaWeWSNzd7OeZsJIRzQUyoaKHnNVn41HJmA_IWn3h9UolXk1w_ytyrCUeUhlxOGzzfetXANTo9pg2K58trXTM8MVEQtgnE6a6N1JCVs87NWKDJheBXTqIDPHTiQaypsCBy6QOFnWcevG_Fw=w1920-h428-no "multi juan"

@@ -167,7 +167,7 @@ const Layout = ({ location, title, children }) => {
             borderRadius: `50%`,
           }}
         />
-        <h2 style={{ ...scale(1), lineHeight: 1.2 }} className="titulo">
+        <h2 style={{ ...scale(0.8), lineHeight: 1.2 }} className="titulo">
           <span className="nombreTipeado">juanm.art/in</span>
           <br />
           Sesali Maydana
