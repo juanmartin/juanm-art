@@ -10,6 +10,6 @@ I usually play with perspectives. How we see and perceive our world has always b
 
 Made this with the help of my genius friend who I admire **a lot**, [@rolodato](https://github.com/rolodato).
 
-<iframe style="border: 0; width: 500px; height: 350px;" src="https://juanmartin.github.io/" seamless><a href="https://juanmartin.github.io/">Para-Crypt</a></iframe>
+<iframe style="border: 0; height: 350px;" src="https://juanmartin.github.io/" seamless><a href="https://juanmartin.github.io/">Para-Crypt</a></iframe>
 
 https://juanmartin.github.io/
