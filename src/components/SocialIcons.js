@@ -31,6 +31,7 @@ const SocialIcons = () => {
           <a
             href="https://open.spotify.com/artist/171PrQcg6CjUbkWpYLYyMH?si=0LvMaa10SMS6hIeThpSmHw"
             target="_blank"
+            rel="noreferrer"
           >
             <FaSpotify alt="Spotify" className="no-underline" style={{float:'left'}} />
           </a>
@@ -39,6 +40,7 @@ const SocialIcons = () => {
           <a
             href="https://maynada.bandcamp.com/"
             target="_blank"
+            rel="noreferrer"
           >
             <FaBandcamp alt="Bandcamp" className="no-underline" style={{float:'left'}} />
           </a>
@@ -47,6 +49,7 @@ const SocialIcons = () => {
           <a
             href={"https://soundcloud.com/" + social.soundcloud}
             target="_blank"
+            rel="noreferrer"
           >
             <FaSoundcloud alt="Soundcloud" className="no-underline" style={{float:'left'}} />
           </a>
@@ -55,6 +58,7 @@ const SocialIcons = () => {
           <a
             href={"https://instagram.com/" + social.instagram}
             target="_blank"
+            rel="noreferrer"
           >
             <FaInstagram alt="Instagram" className="no-underline" style={{float:'left'}} />
           </a>
@@ -63,6 +67,7 @@ const SocialIcons = () => {
           <a
             href={"https://github.com/" + social.github}
             target="_blank"
+            rel="noreferrer"
           >
             <FaGithub alt="Github" className="no-underline" style={{float:'left'}} />
           </a>
@@ -71,6 +76,7 @@ const SocialIcons = () => {
           <a
             href={"mailto:" + email}
             target="_blank"
+            rel="noreferrer"
           >
             <FaEnvelope alt="Email" className="no-underline" style={{float:'left'}} />
           </a>

@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const Page = path.resolve(`./src/templates/page.js`)
   const result = await graphql(`
     {
-      posts: allMarkdownRemark(
+      posts: allMdx(
         filter: { fileAbsolutePath: { regex: "/(blog)/" } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      projects: allMarkdownRemark(
+      projects: allMdx(
         filter: { fileAbsolutePath: { regex: "/(projects)/" } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      pages: allMarkdownRemark(
+      pages: allMdx(
         filter: { fileAbsolutePath: { regex: "/(pages)/" } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
@@ -159,7 +159,7 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,

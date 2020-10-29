@@ -15,7 +15,7 @@ type Data = {
       title: string
     }
   }
-  allMarkdownRemark: {
+  allMdx: {
     edges: {
       node: {
         excerpt: string
@@ -38,7 +38,7 @@ const BlogIndex = ({
   pageContext,
 }: PageProps<Data, PageContext>) => {
   const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMdx.edges
   const { currentPage, numPagesPosts } = pageContext
 
   const isFirst = currentPage === 1
@@ -121,7 +121,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allMdx(
       filter: { fileAbsolutePath: { regex: "/(blog)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit

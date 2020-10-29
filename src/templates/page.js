@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import { MDXRenderer } from "gatsby-plugin-Mdx"
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,7 +8,7 @@ import { rhythm, scale } from "../utils/typography"
 import { siteMetadata } from "../../gatsby-config"
 
 const PageTemplate = ({ data, pageContext, location }) => {
-  const page = data.markdownRemark
+  const page = data.mdx
   // const siteTitle = data.site.siteMetadata.title
   // const { previous, next } = pageContext
 
@@ -37,7 +37,7 @@ const PageTemplate = ({ data, pageContext, location }) => {
             {page.frontmatter.date}
           </p> */}
         </header>
-        <section dangerouslySetInnerHTML={{ __html: page.html }} />
+        <MDXRenderer>{page.body}</MDXRenderer>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -61,10 +61,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

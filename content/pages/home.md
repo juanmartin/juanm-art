@@ -33,8 +33,7 @@ Sometimes I still help with some artworks now and then but the pandemic really m
 
 I worked from mid 2014 to early 2019 in a [research team](https://www.intercambiostransorganicos.org) with university mates (now beloved friends <3). It's quite interesting, you should check it. I left to persue a different path.
 
-
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3dTYMLxSMsLfRb5Oyob5BBNNE5dh-tc3Xk1ONDf7f6qmBHq1eIgVTDMouRKW-qvKPDajTEOr-nCntyZCTkTyq-20UhD4FOXAaN7iRlfo9SjgPn8YGxp5X3kCTrEZ3PmTGv3-nLFPe0Ct9oifZrcvq6LWg=w703-h937-no" title="Juan Frontera" alt="Juan Frontera" width=100%>
+![Juan Frontera][foto frontera]
 
 *Juan sosteniendo la Triple Frontera de Argentina-Paraguay-Brasil.*
 
