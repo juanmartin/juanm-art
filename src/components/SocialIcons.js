@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { FaBandcamp, FaSoundcloud, FaSpotify, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'
+import { FaBandcamp, FaSoundcloud, FaSpotify, FaGithub, FaInstagram, FaEnvelope, FaTwitter } from 'react-icons/fa'
 
 const SocialIcons = () => {
     const data = useStaticQuery(graphql`
@@ -65,7 +65,16 @@ const SocialIcons = () => {
         </li>
         <li className="mr-3">
           <a
-            href={"https://github.com/" + social.github}
+            href={"https://twitter.com/" + social.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaTwitter alt="Twitter" className="no-underline" style={{float:'left'}} />
+          </a>
+        </li>
+        <li className="mr-3">
+          <a
+            href={"https://github.com/" + social.twitter}
             target="_blank"
             rel="noreferrer"
           >

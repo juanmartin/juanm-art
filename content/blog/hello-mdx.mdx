@@ -5,17 +5,19 @@ description: "A post showing MDX in action"
 categories: [code]
 comments: false
 ---
-import { FaAdn } from "react-icons/fa"
+import { FaBeer } from "react-icons/fa"
 
 YAS!
 I added MDX support following [this tutorial](https://www.gatsbyjs.com/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/).
 
 ```js
-// you can write JSX in your Markdown!
-<button>test</button>
+// you can write JSX in your Markdown! The following button is this
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">test</button>
 ```
 
-<button>test</button>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">test</button>
+
+I'm using [Tailwind](https://tailwindcss.com/) btw, discovered it with this Gatsby starter. Looks like inline styling... but it's not.
 
 Thanks to VSCode I was able to quickly find and replace everything from `mardownRemark` to `mdx` plugin.
 Now I'm able to combine JSX within my new MDX files! Cool huh!? I'll better do some trippy shit now.
