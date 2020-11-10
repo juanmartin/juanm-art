@@ -15,3 +15,4 @@
   - cv ahi mismo o boton para bajar, linkedin?
 - ~~Completar Musica (music.js) ver de embeber players~~
 - ~~Hay que ponerle el /in en prod hosteado.~~
+- ~~Arreglar que Tailwind no anda en .mdx~~

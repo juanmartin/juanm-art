@@ -6,20 +6,43 @@ categories: [code]
 comments: false
 ---
 import { FaBeer } from "react-icons/fa"
+import '../../src/components/global.css'
 
 YAS!
 I added MDX support following [this tutorial](https://www.gatsbyjs.com/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/).
 
 ```js
 // you can write JSX in your Markdown! The following button is this
-<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">test</button>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-5">test</button>
 ```
 
-<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">test</button>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-5">test</button>
 
 I'm using [Tailwind](https://tailwindcss.com/) btw, discovered it with this Gatsby starter. Looks like inline styling... but it's not.
 
 Thanks to VSCode I was able to quickly find and replace everything from `mardownRemark` to `mdx` plugin.
 Now I'm able to combine JSX within my new MDX files! Cool huh!? I'll better do some trippy shit now.
 
-<FaAdn />
+<big><FaBeer /></big> This is a Beer Font Awesome icon.
+
+## EDIT:
+It didn't actually work at first. I even posted [a question](https://stackoverflow.com/questions/64657572/production-gatsby-blog-not-rendering-tailwindcss-classes-in-mdx-files) in StackOverflow but it was closed due to lack of clarity... =(
+
+### I answered myself. This is what I found out:
+
+What happened was that TailwindCSS uses PurgeCSS to cleanup any unused classes. This cleanup is done on production builds only, at dev, they are always available so that quick changes reflect inmediatly.
+
+I just had to add .mdx to the exclusion list in `tailwind.config.js` file. Like so:
+
+```javascript
+module.exports = {
+  purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx", "./content/**/*.mdx"],
+  ...
+}
+```
+
+My `.mdx` files are under `./content/...` so I just added the expression to the list and the purging process considers those files as well.
+
+I realized this was the issue because Tailwind classes worked in js files and **some** classes where loaded and visible in chrome devtools. For instance, the button above had the `.mt-5` class described but not the blue color, etc. This class is used somewhere else over this site in a .js file.
+
+I feel good. At first I was totally baffled by this issue, but some quick devtools inspection enlightened me!
