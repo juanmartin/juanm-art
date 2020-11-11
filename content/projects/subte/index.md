@@ -6,7 +6,7 @@ categories: [code]
 comments: true
 ---
 
-Junto a @piluxt y la gente de [Zenta](http://zentaprodu.com.ar/) instalamos la infraestructura IoT de Azure para la línea B del subte de la Ciudad de Buenos Aires.
+Junto a [@piluxt](https://www.instagram.com/piluxt/) y la gente de [Zenta](http://zentaprodu.com.ar/) instalamos la infraestructura IoT de Azure para la línea B del subte de la Ciudad de Buenos Aires.
 
 ![mapa subte](https://www.metrovias.com.ar/wp-content/uploads/2019/06/Esquema%CC%81tico-2019-web.jpg)
 

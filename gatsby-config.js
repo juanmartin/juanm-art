@@ -47,6 +47,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-remark-images`,
+      options: {
+        
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [".mdx", ".md"],
@@ -73,7 +79,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        icon: `content/assets/website-icon.png`
       }
     },
     {
@@ -107,6 +112,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     "gatsby-plugin-dark-mode",
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    // `gatsby-plugin-mdx-embed`,
   ],
 }
