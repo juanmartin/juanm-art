@@ -18,6 +18,8 @@ module.exports = {
     defaultImage: "images/bg.jpeg",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -74,12 +76,6 @@ module.exports = {
           `gatsby-remark-smartypants`,
         ],
       },
-    },
-    `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,

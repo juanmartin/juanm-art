@@ -9,8 +9,19 @@ import { siteMetadata } from "../../gatsby-config"
 
 const ProjectPostTemplate = ({ data, pageContext, location }) => {
   const post = data.mdx
+  let embeddedImages = data.mdx.frontmatter.embeddedImages
   // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+
+  const IMAGE_KEY = "image"
+  const embeddedImagesByKey =
+    embeddedImages &&
+    embeddedImages.reduce((images, image, index) => {
+      images[`${IMAGE_KEY}${index + 1}`] = images[`${IMAGE_KEY}${index + 1}`] || {
+        ...image.childImageSharp,
+      }
+      return images
+    }, {})
 
   return (
     <Layout location={location} title={siteMetadata.title}>
@@ -37,7 +48,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MDXRenderer embeddedImages={embeddedImagesByKey} >{post.body}</MDXRenderer>
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -95,6 +106,18 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        embeddedImages {
+          childImageSharp {
+            original {
+              width
+              height
+              src
+            }
+            fluid(quality: 90, maxWidth: 410) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
