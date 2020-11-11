@@ -127,7 +127,7 @@ const Layout = ({ location, title, children }) => {
 
   useEffect(() => {
     const typedOpts = {
-      strings: ["juanm.art/in ", "Juan Martin"],
+      strings: ["juanm.art/in ", "Juan Martín"],
       typeSpeed: 80,
       backSpeed: 80,
       startDelay: 1000,
