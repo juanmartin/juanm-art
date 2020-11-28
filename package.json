@@ -37,6 +37,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
+    "react-player": "^2.7.0",
     "react-typography": "^0.16.19",
     "typed.js": "^2.0.11",
     "typeface-merriweather": "1.1.13",

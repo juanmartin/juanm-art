@@ -1,0 +1,43 @@
+---
+title: IoT para Subtes de Metrovías
+date: "2020-10-24T07:26:03.284Z"
+description: "Trabajo de instalación de IoT en subtes de la Ciudad de Buenos Aires."
+categories: [code]
+comments: true
+---
+
+import ReactPlayer from 'react-player'
+import videoSubte from './subte.mp4'
+
+
+Junto a [@piluxt](https://www.instagram.com/piluxt/) y la gente de [Zenta](http://zentaprodu.com.ar/) instalamos la infraestructura IoT de Azure para la línea C del subte de la Ciudad de Buenos Aires.
+
+![mapa subte](https://www.metrovias.com.ar/wp-content/uploads/2019/06/Esquema%CC%81tico-2019-web.jpg)
+
+
+## Objetivo
+
+El sistema consiste en conectar los tableros de los medios de elevación para que reporten su estado a la nube. De ahi la gente de la Ciudad puede detectar fallas o avisar a los usuarios cuando alguna estaclera o asensor no estén disponibles.
+
+## Tech
+
+Dado que el gobierno argentino tiene un convenio con Microsoft, utilizamos Azure como la plataforma IoT. Utilizamos varios de los servicios de la nube que ofrecen.
+
+### Arquitectura
+
+Las escaleras o asensores cuentan con una placa de control que tiene unas salidas para reportar el estado. Si mal no recuerdo mandan 5v cada una, eso lo lee la placa que diseñó Pilu y manda la data a través de un transmisor por LoRa a un Conduit (una suerte de router LoRa que centraliza la data), ambos de la marca Multi-Tech.
+
+El Conduit device se conecta a la red local del subte para impactar contra el Edge device (Raspberry Pi) que se encuentra en la terminal (punta) de la línea, en nuestro caso la C sería en Constitución.
+
+Esta Raspberry Pi actuando de Edge device puede correr servicios sobre esta data recopilada antes de enviarla a la nube, de manera que ahorran costos de transmisión en el servicio. Implementamos un filtro para que reporte solamente los estados cambiantes y envíe las alertas nuevas, y si todo sigue igual, no se impacta data sobre la nube.
+
+## Fin
+
+<div className="flex">
+<div>
+  <p>Íbamos a continuar con la línea B, pero **PANDEMIA**.</p>
+  <p>Fue complicado al principio entender la infraestructura Microsoft, muchas horas de documentación y prueba y error, pero fue gratificante el desafío.</p>
+  <p>También fue divertido el hecho de trabajar en un lugar que suele estar lleno de gente pero de noche cuando está vacío... <span className="italic">y cerrado, claro</span>. Un escenario raro de ver.</p>
+</div>
+  <ReactPlayer url={videoSubte} playing loop muted className="ml-0" />
+</div>

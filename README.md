@@ -16,3 +16,4 @@
 - ~~Completar Musica (music.js) ver de embeber players~~
 - ~~Hay que ponerle el /in en prod hosteado.~~
 - ~~Arreglar que Tailwind no anda en .mdx~~
+- CV con skills con algo fancy.
