@@ -6,7 +6,7 @@
 ## TODO
 
 - ~~Add MDX support para flasharla más.~~
-- Invertir avatar en dark mode.
+- ~~Invertir avatar en dark mode.~~
 - ~~Projects template~~
 - Cargar proyectos, y blogposts... Este item va a estar para siempre.
 - Completar home
