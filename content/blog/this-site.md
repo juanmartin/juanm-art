@@ -8,13 +8,13 @@ comments: true
 
 ## OK, now in English.
 
-Sometimes I even think in English. I'm a native Spanish speaker since I'm argentinian, but I was sent to a bilingual school since very young so I feel English as a mother language too. The tech industry seems to be primarily English-driven so lots of documentation is written in this language. It just felt that learning from docs in Spanish was like reading second-hand-translated-versions of Enlish ones, and I just wanted to read the original source. *Kind of watching movies with their original language audio.*
+Sometimes I even think in English. I'm a native Spanish speaker since I'm argentinian, but I was sent to a bilingual school since very young so I feel English as a mother language too. The tech industry seems to be primarily English-driven so lots of documentation is written in this language. It just felt that learning from docs in Spanish was like reading second-hand-translated-versions of Enlish ones, and I just wanted to read the original source. *Like watching non-dubbed movies.*
 
 ## Web
 I'll repeat myself a bit here since the first blog post was written in Spanish.
 *Oh right, just remembered Google Translate exists.*
 
-I started messing around with the web since very young. I think I was... 14? when I did my first Geocities site with some sort of WYSIWYG editor, then learned some HTML and CSS, and even some PHP because of [vBulletin](https://www.vbulletin.com/) or [phpBB](https://www.phpbb.com/) forum software. Still couldn't code, but kind of followed along. Just edited stuff to reach my needs.
+I started messing around with the web since very young. I think I was... 14? when I did my first Geocities site with some sort of WYSIWYG editor, then learned some HTML and CSS, and even some PHP because of [vBulletin](https://www.vbulletin.com/) or [phpBB](https://www.phpbb.com/) forum software. Still couldn't code, but kind of followed along. Just edited stuff to reach my needs. Also ran my own site and forum for the Lineage 2 server I was hosting at home.
 
 ## For real
 While studying software engineering at [ITBA](https://www.itba.edu.ar/ "Instituto Tecnológico de Buenos Aires") I started developing [Wordpress](https://wordpress.org/) sites with a friend there to earn some *dosh*. Never really made my own site, 'till now.
