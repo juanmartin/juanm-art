@@ -44,7 +44,7 @@ const ProjectIndex = ({
   const isFirst = currentPage === 1
   const isLast = currentPage === numPagesProjects
   const prevPage = currentPage - 1 === 1 ? "/projects" : "/projects/" + (currentPage - 1).toString()
-  const nextPage = isFirst ? "./" + (currentPage + 1).toString() : "../" + (currentPage + 1).toString()
+  const nextPage = isFirst ? "./projects/" + (currentPage + 1).toString() : "./projects" + (currentPage + 1).toString()
 
   return (
     <Layout location={location} title={siteTitle}>
