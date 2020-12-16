@@ -75,7 +75,7 @@ const Layout = ({ location, title, children }) => {
     }
   `)
 
-  const [isDark, setisDark] = useState(true)
+  const [isDark, setisDark] = useState(localStorage.theme === "light" ? false : true)
 
   const toggle = (
     <ThemeToggler>
