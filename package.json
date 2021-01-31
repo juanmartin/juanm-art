@@ -68,6 +68,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests!\" && exit 1",
-    "move": "cd public && mkdir in && mv !(in) in && cp in/_redirects ."
+    "move": "mkdir in && mv public/* in && cp in/_redirects public && mv in public"
   }
 }
