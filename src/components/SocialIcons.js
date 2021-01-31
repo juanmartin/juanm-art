@@ -65,7 +65,7 @@ const SocialIcons = () => {
         </li>
         <li className="mr-3">
           <a
-            href={"https://twitter.com/" + social.github}
+            href={"https://twitter.com/" + social.twitter}
             target="_blank"
             rel="noreferrer"
           >
@@ -74,7 +74,7 @@ const SocialIcons = () => {
         </li>
         <li className="mr-3">
           <a
-            href={"https://github.com/" + social.twitter}
+            href={"https://github.com/" + social.github}
             target="_blank"
             rel="noreferrer"
           >

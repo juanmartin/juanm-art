@@ -75,7 +75,7 @@ const Layout = ({ location, title, children }) => {
     }
   `)
 
-  const [isDark, setisDark] = useState(localStorage.theme === "light" ? false : true)
+  const [isDark, setisDark] = useState(true)
 
   const toggle = (
     <ThemeToggler>
@@ -145,6 +145,10 @@ const Layout = ({ location, title, children }) => {
       tipi.destroy()
     }
   }, [])
+
+  useEffect(() => {
+    setisDark(localStorage.theme === "light" ? false : true);
+  }, []);
 
   function AvatarImage() {
     if (isDark) {
