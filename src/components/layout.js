@@ -66,7 +66,7 @@ const Layout = ({ location, title, children }) => {
           }
           social {
             twitter
-            instagram
+            linkedin
             soundcloud
             github
           }

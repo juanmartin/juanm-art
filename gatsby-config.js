@@ -11,7 +11,7 @@ module.exports = {
     siteUrl: `https://juanm.art/`,
     social: {
       twitter: `jaunmatrin`,
-      instagram: `jaunmatrin`,
+      linkedin: `juanmartinsm`,
       soundcloud: `sesali`,
       github: `juanmartin`,
     },
