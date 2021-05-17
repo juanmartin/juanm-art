@@ -59,7 +59,6 @@ const ProjectIndex = ({
   const nextPage = isFirst ? "./projects/" + (currentPage + 1).toString() : "./projects" + (currentPage + 1).toString()
 
   const imgs = data.allMdx.edges
-  console.log('data', imgs)
 
   return (
     <Layout location={location} title={siteTitle}>

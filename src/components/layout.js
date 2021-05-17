@@ -3,7 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { scale, rhythm } from "../utils/typography"
-// import { jsx, useColorMode } from "theme-ui"
 import Typed from "typed.js"
 
 import Footer from "./footer"
@@ -11,30 +10,6 @@ import Navbar from "./Navbar"
 import SocialIcons from "./SocialIcons"
 import "./global.css"
 
-// const DarkModeAvatar = () => {
-//   const data = useStaticQuery(graphql`
-//   {
-//     avatar: file(absolutePath: {regex: "/website-icon.png/"}) {
-//       childImageSharp {
-//         fixed(width: 150, height: 150) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//     avatarDark: file(absolutePath: {regex: "/website-icon.png/"}) {
-//       childImageSharp {
-//         fixed(width: 150, height: 150,
-//           duotone: {
-//             highlight: "#000000",
-//             shadow: "#FFFFFF"
-//           }) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-//   `)
-// }
 
 const Layout = ({ location, title, children }) => {
   const data = useStaticQuery(graphql`
@@ -92,7 +67,6 @@ const Layout = ({ location, title, children }) => {
           <button
             aria-label="theme-switch"
             className="leading-none"
-            // onClick={() => toggleTheme(isDarkMode ? "light" : "dark")}
             onClick={() => cambiarDark()}
           >
             {isDarkMode ? (
