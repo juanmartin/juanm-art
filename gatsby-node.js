@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
       posts: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+        filter: { fileAbsolutePath: { regex: "/(blog)/" }, fields: { draft: { eq: false } } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
       ) {
@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       projects: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+        filter: { fileAbsolutePath: { regex: "/(projects)/" }, fields: { draft: { eq: false } } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
       ) {
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
       pages: allMdx(
-        filter: { fileAbsolutePath: { regex: "/(pages)/" } }
+        filter: { fileAbsolutePath: { regex: "/(pages)/" }, fields: { draft: { eq: false } } }
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
       ) {
@@ -125,9 +125,10 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   // Create blog post list pages
-  const postsPerPage = 6
+  const postsPerPage = 6  // blog posts per page
+  const postsPerPageProjects = 9  // projects per page
   const numPagesPosts = Math.ceil(posts.length / postsPerPage)
-  const numPagesProjects = Math.ceil(projects.length / postsPerPage)
+  const numPagesProjects = Math.ceil(projects.length / postsPerPageProjects)
   // blog
   Array.from({ length: numPagesPosts }).forEach((_, i) => {
     createPage({
@@ -147,8 +148,8 @@ exports.createPages = async ({ graphql, actions }) => {
       path: i === 0 ? `/projects` : `/projects/${i + 1}`,
       component: path.resolve("./src/templates/project-list.tsx"),
       context: {
-        limit: postsPerPage,
-        skip: i * postsPerPage,
+        limit: postsPerPageProjects,
+        skip: i * postsPerPageProjects,
         numPagesProjects,
         currentPage: i + 1,
       },

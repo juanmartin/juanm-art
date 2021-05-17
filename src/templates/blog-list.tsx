@@ -122,7 +122,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+      filter: { fileAbsolutePath: { regex: "/(blog)/" }, fields: { draft: { eq: false } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip

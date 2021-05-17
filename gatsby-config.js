@@ -79,6 +79,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-draft',
+      options: {
+        nodeType: 'Mdx',
+        publishDraft: process.env.NODE_ENV !== 'production',
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `G-Y6BJYCPVZ8`,

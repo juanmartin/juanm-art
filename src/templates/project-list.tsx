@@ -154,7 +154,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      filter: { fileAbsolutePath: { regex: "/(projects)/" }, fields: { draft: { eq: false } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
       skip: $skip
