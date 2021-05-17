@@ -114,6 +114,9 @@ button {
   .main-content {
     width: calc(75% - 380px);
   }
+  .widthOverride {
+    width: 900px !important;
+  }
 }
 
 .titulo {

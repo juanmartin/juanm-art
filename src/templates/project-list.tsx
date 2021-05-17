@@ -63,36 +63,53 @@ const ProjectIndex = ({
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home" />
-      <div className="md:flex flex-row flex-wrap flex-grow mt-5">
+      <div className="md:flex flex-row flex-wrap flex-grow mt-5 widthOverride gap-3">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const featuredImage = node.frontmatter.featuredImage.childImageSharp.fluid
           return (
-            <article key={node.fields.slug} className="md:w-2/5 mr-2 mb-2 p-3 transition duration-500 ease-in-out hover:shadow-2xl shadow-lg rounded border-solid border-2 border-white hover:border-red-400 border-opacity-25 hover:border-opacity-100">
-              <Img fluid={featuredImage} className="h-40 -mb-10" />
-              <header>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={isFirst ? "." + node.fields.slug : ".." + node.fields.slug}
+            <Link
+              className="shadow-none"
+              style={{ color: 'var(--textNormal)' }}
+              to={
+                isFirst ? "." + node.fields.slug : ".." + node.fields.slug
+              }
+            >
+              <article
+                key={node.fields.slug}
+                className="md:w-72 h-full p-3 transition duration-200 ease-in-out 
+              hover:shadow-3xl shadow-close rounded 
+              hover:border-red-400 border-opacity-5 hover:border-opacity-100"
+              >
+
+                <div className="group bg-gradient-to-br from-red-200 to-orange-300">
+                  <Img
+                    fluid={featuredImage}
+                    className="h-64 md:h-40 -mb-10 transition duration-125 ease-in-out
+                mix-blend-hard-multiply filter opacity-75 group-hover:filter-none"
+                  />
+                </div>
+
+                <header>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                    className="group-hover:text-white"
                   >
                     {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </section>
+              </article>
+            </Link>
           )
         })}
       </div>
