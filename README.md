@@ -11,9 +11,8 @@
 - Cargar proyectos, y blogposts... Este item va a estar para siempre.
 - Completar home
   - foto/s?
-  - skills
-  - cv ahi mismo o boton para bajar, linkedin?
+  - CV con skills con algo fancy.
+  - ~~cv ahi mismo o boton para bajar~~, ~~linkedin?~~
 - ~~Completar Musica (music.js) ver de embeber players~~
 - ~~Hay que ponerle el /in en prod hosteado.~~
 - ~~Arreglar que Tailwind no anda en .mdx~~
-- CV con skills con algo fancy.
