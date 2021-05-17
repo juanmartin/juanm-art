@@ -1,6 +1,6 @@
 ---
 title: Museo AySA Virtual
-date: "2020-09-10T07:26:03.284Z"
+date: "2020-09-10T07:45:00.000Z"
 description: "Tour 360 del Museo de AySA."
 categories: [code]
 featuredImage: './aysa.png'

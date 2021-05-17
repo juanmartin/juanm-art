@@ -1,6 +1,6 @@
 ---
 title: Parallax-Cryptography
-date: "2017-02-19T17:26:03.284Z"
+date: "2017-02-20T17:30:00.000Z"
 description: "Hidden message in a 3D letter mess."
 categories: [code]
 featuredImage: './paracrypt.png'
