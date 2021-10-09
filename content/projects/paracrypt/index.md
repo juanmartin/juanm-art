@@ -4,6 +4,7 @@ date: "2017-02-20T17:30:00.000Z"
 description: "Hidden message in a 3D letter mess."
 categories: [code]
 featuredImage: './paracrypt.png'
+draft: false
 ---
 
 I usually play with perspectives. How we see and perceive our world has always been a subject of analysis for me. I have "voluntary" [strabismus](https://en.wikipedia.org/wiki/Strabismus) meaning I can control it, this allows some crazy perspectives. Playing with my eyes as a kid showed me a hidden world. Create a view in which you consider the image in your brain as two-dimensional, therefore objects that are further away can collide with those that are close.

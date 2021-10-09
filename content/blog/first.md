@@ -3,6 +3,7 @@ title: Primer blog post in my life
 date: "2020-10-27T21:50:00.000Z"
 description: "Hello world del blog? Quizás."
 categories: [code]
+draft: false
 ---
 
 Finalmente comencé a diseñar este sitio ya que me urgía la necesidad de comenzar a escribir cosas que pienso, aventuras que vivo, relatos tecnológicos, etc. Lo que pinte. Voy a improvisar un poco.

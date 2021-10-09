@@ -4,6 +4,7 @@ date: "2020-09-10T07:45:00.000Z"
 description: "Tour 360 del Museo de AySA."
 categories: [code]
 featuredImage: './aysa.png'
+draft: false
 ---
 
 Recorrido virtual para el museo de AySA. Usamos [Pannelum](https://pannellum.org/). Lo hicimos junto con [Tomas Ciccola](https://gitlab.com/tomasciccola/).

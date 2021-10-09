@@ -4,6 +4,7 @@ date: "2020-10-27T22:18:00.000Z"
 description: "About developing this site."
 categories: [code]
 comments: true
+draft: false
 ---
 
 ## OK, now in English.
