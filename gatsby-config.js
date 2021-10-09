@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV === 'development'
+// console.log('ENV = dev?', isDev)
 module.exports = {
   pathPrefix: "/in",
   siteMetadata: {
@@ -82,7 +84,7 @@ module.exports = {
       resolve: 'gatsby-plugin-draft',
       options: {
         nodeType: 'Mdx',
-        publishDraft: process.env.NODE_ENV !== 'production',
+        publishDraft: isDev,
       },
     },
     {
