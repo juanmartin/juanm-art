@@ -20,6 +20,7 @@ module.exports = {
     defaultImage: "images/bg.jpeg",
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

@@ -4,7 +4,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 type PageContext = {
   currentPage: number
@@ -66,7 +66,7 @@ const ProjectIndex = ({
       <div className="md:flex flex-row flex-wrap flex-grow mt-5 widthOverride gap-3">
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          const featuredImage = node.frontmatter.featuredImage.childImageSharp.fluid
+          const featuredImage = node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
           return (
             <Link
               className="shadow-none"
@@ -83,11 +83,10 @@ const ProjectIndex = ({
               >
 
                 <div className="group bg-gradient-to-br from-red-200 to-orange-300">
-                  <Img
-                    fluid={featuredImage}
+                  <GatsbyImage
+                    image={featuredImage}
                     className="h-64 md:h-40 -mb-10 transition duration-125 ease-in-out
-                mix-blend-hard-multiply filter opacity-75 group-hover:filter-none"
-                  />
+                mix-blend-hard-multiply filter opacity-75 group-hover:filter-none" />
                 </div>
 
                 <header>
@@ -110,7 +109,7 @@ const ProjectIndex = ({
                 </section>
               </article>
             </Link>
-          )
+          );
         })}
       </div>
 
@@ -141,44 +140,41 @@ const ProjectIndex = ({
         </ul>
       </nav>
     </Layout>
-  )
+  );
 }
 
 export default ProjectIndex
 
-export const pageQuery = graphql`
-  query projectPageQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
+export const pageQuery = graphql`query projectPageQuery($skip: Int!, $limit: Int!) {
+  site {
+    siteMetadata {
+      title
     }
-    allMdx(
-      filter: { fileAbsolutePath: { regex: "/(projects)/" }, fields: { draft: { eq: false } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-            featuredImage {
-              childImageSharp {
-                fluid(quality: 100, maxWidth: 300) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+  }
+  allMdx(
+    filter: {fileAbsolutePath: {regex: "/(projects)/"}, fields: {draft: {eq: false}}}
+    sort: {fields: [frontmatter___date], order: DESC}
+    limit: $limit
+    skip: $skip
+  ) {
+    edges {
+      node {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData(quality: 100, width: 300, layout: CONSTRAINED)
             }
           }
         }
       }
     }
   }
+}
 `

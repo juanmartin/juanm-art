@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { siteMetadata } from "../../gatsby-config"
 
@@ -25,7 +25,7 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
 
   return (
     <Layout location={location} title={siteMetadata.title}>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -91,34 +91,31 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
 
 export default ProjectPostTemplate
 
-export const pageQuery = graphql`
-  query ProjectPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
+export const pageQuery = graphql`query ProjectPostBySlug($slug: String!) {
+  site {
+    siteMetadata {
+      title
     }
-    mdx(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
-      body
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
-        embeddedImages {
-          childImageSharp {
-            original {
-              width
-              height
-              src
-            }
-            fluid(quality: 90, maxWidth: 410) {
-              ...GatsbyImageSharpFluid
-            }
+  }
+  mdx(fields: {slug: {eq: $slug}}) {
+    id
+    excerpt(pruneLength: 160)
+    body
+    frontmatter {
+      title
+      date(formatString: "MMMM DD, YYYY")
+      description
+      embeddedImages {
+        childImageSharp {
+          original {
+            width
+            height
+            src
           }
+          gatsbyImageData(quality: 90, width: 410, layout: CONSTRAINED)
         }
       }
     }
   }
+}
 `

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { scale, rhythm } from "../utils/typography"
 import Typed from "typed.js"
@@ -12,43 +12,39 @@ import "./global.css"
 
 
 const Layout = ({ location, title, children }) => {
-  const data = useStaticQuery(graphql`
-    {
-      avatar: file(absolutePath: { regex: "/website-icon.png/" }) {
-        childImageSharp {
-          fixed(width: 150, height: 150) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+  const data = useStaticQuery(graphql`{
+  avatar: file(absolutePath: {regex: "/website-icon.png/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 150, height: 150, layout: FIXED)
+    }
+  }
+  avatarDark: file(absolutePath: {regex: "/website-icon.png/"}) {
+    childImageSharp {
+      gatsbyImageData(
+        width: 150
+        height: 150
+        transformOptions: {duotone: {highlight: "#000000", shadow: "#FFFFFF"}}
+        layout: FIXED
+      )
+    }
+  }
+  site {
+    siteMetadata {
+      author {
+        name
+        summary
+        email
       }
-      avatarDark: file(absolutePath: { regex: "/website-icon.png/" }) {
-        childImageSharp {
-          fixed(
-            width: 150
-            height: 150
-            duotone: { highlight: "#000000", shadow: "#FFFFFF" }
-          ) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author {
-            name
-            summary
-            email
-          }
-          social {
-            twitter
-            linkedin
-            soundcloud
-            github
-          }
-        }
+      social {
+        twitter
+        linkedin
+        soundcloud
+        github
       }
     }
-  `)
+  }
+}
+`)
 
   const [isDark, setisDark] = useState(true)
 
@@ -127,8 +123,8 @@ const Layout = ({ location, title, children }) => {
   function AvatarImage() {
     if (isDark) {
       return (
-        <Img
-          fixed={data.avatarDark.childImageSharp.fixed}
+        <GatsbyImage
+          image={data.avatarDark.childImageSharp.gatsbyImageData}
           alt={data.site.siteMetadata.author.name}
           style={{
             marginRight: rhythm(1 / 2),
@@ -138,12 +134,12 @@ const Layout = ({ location, title, children }) => {
           }}
           imgStyle={{
             borderRadius: `50%`,
-          }}
-        />)
+          }} />
+      );
     } else {
       return (
-        <Img
-          fixed={data.avatar.childImageSharp.fixed}
+        <GatsbyImage
+          image={data.avatar.childImageSharp.gatsbyImageData}
           alt={data.site.siteMetadata.author.name}
           style={{
             marginRight: rhythm(1 / 2),
@@ -153,8 +149,8 @@ const Layout = ({ location, title, children }) => {
           }}
           imgStyle={{
             borderRadius: `50%`,
-          }}
-        />)
+          }} />
+      );
     }
   }
 
