@@ -14,7 +14,7 @@ module.exports = {
     social: {
       twitter: `jaunmatrin`,
       linkedin: `juanmartinsm`,
-      soundcloud: `sesali`,
+      soundcloud: `jaunmatrin`,
       github: `juanmartin`,
     },
     defaultImage: "images/bg.jpeg",
