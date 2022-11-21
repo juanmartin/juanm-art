@@ -4,7 +4,7 @@ date: "2021-05-01T16:20:00.000Z"
 description: "Sistema de Administración de Siniestros de Tránsito."
 categories: [code]
 featuredImage: './sas-512.png'
-draft: true
+draft: false
 ---
 
 I was asked by a client to make an old system responsive. It is a platform in which lawyers can interact with assurance agents and keep up to date with each and all of their current cases related to traffic accidents. This involves users with different roles, a DB to store all the info and lots of forms on the frontend.
