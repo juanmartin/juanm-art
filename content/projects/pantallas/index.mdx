@@ -9,14 +9,14 @@ embeddedImages:
 - pantallas-login.png
 - pantallas-dashboard.png
 ---
-import Img from 'gatsby-image'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { FaHeart, FaClock } from "react-icons/fa"
 import { GoRepoForked } from "react-icons/go"
 
 
 <div className="md:flex flex-row">
-  <Img fluid={props.embeddedImages.image1.fluid} alt="Login Screenshot" className="w-full mr-3 mb-2" />
-  <Img fluid={props.embeddedImages.image2.fluid} alt="Dashboard Screenshot" className="w-full mb-2" />
+  <GatsbyImage image={getImage(props.embeddedImages.image1)} alt="Login Screenshot" className="w-full mr-3 mb-2" />
+  <GatsbyImage image={getImage(props.embeddedImages.image2)} alt="Dashboard Screenshot" className="w-full mb-2" />
 </div>
 
 I was asked to integrate new features to an existing _pair_ of applications. These are two companion apps, one is the admin panel on which the user is able to upload media files, then generate playlists of the content and finally assign these playlists to your available devices. These devices then run the _other_ app, which is just a Player for this content. In both of them you are asked to log in so that all your content and settings are saved.
