@@ -21,7 +21,7 @@ I added MDX support following [this tutorial](https://www.gatsbyjs.com/blog/2019
 
 I'm using [Tailwind](https://tailwindcss.com/) btw, discovered it with this Gatsby starter. Looks like inline styling... but it's not.
 
-Thanks to VSCode I was able to quickly find and replace everything from `mardownRemark` to `mdx` plugin.
+Thanks to VSCode I was able to quickly find and replace everything from `markdownRemark` to `mdx` plugin.
 Now I'm able to combine JSX within my new MDX files! Cool huh!? I'll better do something trippy now.
 
 <big><FaBeer /></big> This is a Beer Font Awesome icon.
@@ -31,7 +31,7 @@ Styling classes from Tailwind didn't actually work in these .mdx files... in pro
 
 ### I answered myself. This is what I found out:
 
-What happened was that TailwindCSS uses PurgeCSS to cleanup any unused classes. This cleanup is done on production builds only, at dev, they are always available so that quick changes reflect inmediatly.
+What happened was that TailwindCSS uses PurgeCSS to cleanup any unused classes. This cleanup is done on production builds only, at dev, they are always available so that quick changes reflect immediately.
 
 I just had to add .mdx to the exclusion list in `tailwind.config.js` file. Like so:
 
