@@ -127,7 +127,7 @@ const Layout = ({ location, title, children }) => {
           image={data.avatarDark.childImageSharp.gatsbyImageData}
           alt={data.site.siteMetadata.author.name}
           style={{
-            marginRight: rhythm(1 / 2),
+            margin: `auto`,
             marginBottom: 20,
             minWidth: 150,
             borderRadius: `100%`,
@@ -142,7 +142,7 @@ const Layout = ({ location, title, children }) => {
           image={data.avatar.childImageSharp.gatsbyImageData}
           alt={data.site.siteMetadata.author.name}
           style={{
-            marginRight: rhythm(1 / 2),
+            margin: `auto`,
             marginBottom: 20,
             minWidth: 150,
             borderRadius: `100%`,
