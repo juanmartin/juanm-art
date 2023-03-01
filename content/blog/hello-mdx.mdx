@@ -6,27 +6,35 @@ categories: [code]
 comments: false
 draft: false
 ---
+
 import { FaBeer } from "react-icons/fa"
-import '../../src/components/global.css'
+import "../../src/components/global.css"
 
 YAS!
 I added MDX support following [this tutorial](https://www.gatsbyjs.com/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/).
 
 ```js
 // you can write JSX in your Markdown! The following button is this
-<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-5">test</button>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-5">
+  test
+</button>
 ```
 
-<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-5">test</button>
+<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-5">
+  test
+</button>
 
 I'm using [Tailwind](https://tailwindcss.com/) btw, discovered it with this Gatsby starter. Looks like inline styling... but it's not.
 
 Thanks to VSCode I was able to quickly find and replace everything from `markdownRemark` to `mdx` plugin.
-Now I'm able to combine JSX within my new MDX files! Cool huh!? I'll better do something trippy now.
+Now I'm able to combine JSX within my new MDX files! Cool huh!? DX level up :D
 
-<big><FaBeer /></big> This is a Beer Font Awesome icon.
+<big>
+  <FaBeer />
+</big> This is a Beer Font Awesome icon.
 
 ## EDIT:
+
 Styling classes from Tailwind didn't actually work in these .mdx files... in production. It did in dev environment.
 
 ### I answered myself. This is what I found out:
@@ -47,3 +55,28 @@ My `.mdx` files are under `./content/...` so I just added the expression to the 
 I realized this was the issue because Tailwind classes worked in js files and **some** classes where loaded and visible in chrome devtools. For instance, the button above had the `.mt-5` class described but not the blue color, etc. This class is used somewhere else over this site in a .js file.
 
 I feel good. At first I was totally baffled by this issue, but some quick devtools inspection enlightened me!
+
+## EDIT 2 (2023)
+
+After a while of inactivity on this site I realized that somehow this was broken again. Adding content became a second priority since I was stubbornly trying to fix this issue.
+
+> Enter the _rabbit hole_ 🕳️🐇
+
+I started even reading this post again and googling only to find TailwindCSS installation guides, of course none of it helped. I even went ahead and updated major versions of my deps, following migration guides.
+
+It was until I realized VSCode was not auto-completing the classes involving colors. The problem was that I couldn't get my head out of the purging problem, I had to think in a more specific way. Analyzing the classes that were missing, they turned out to be only colors. So checking the `tailwind.config.js` file I had a `colors` object describing only one mysterious `darkGray` which I didn't use anywhere on the site 🤷.
+
+So the fix was finally very easy _(as usual with this kind of thing)_: just wrap that `color` object into an `extend` object so that instead of replacing **all** the colors Tailwind brings, **add** the one (that I'm not using lol).
+
+````js
+// tailwind.config.js
+theme: {
+    extend: {
+      colors: {
+        darkGray: '#0C0C0C'
+      }
+    },
+
+    {/*...*/}
+}
+````

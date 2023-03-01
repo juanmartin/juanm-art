@@ -22,7 +22,7 @@ La casilla de mails está llena hace rato, de manera que no permite recibir más
 
 Y el whatsapp? el teléfono inmediatamente se llenó. Ahora permanece apagado, y cada vez que lo prendo veo el enorme número de llamadas, sms, whatsapp, facebook, y demás notificaciones, a tal punto que se cuelga y el almacenamiento colapsa, obligándome a borrar cosas para poder utilizarlo quizás para un pequeño trámite.
 
-> TO-DO: INVESTIGAR MODO MUERTE EN FACEBOOK Y O GOOGLE. DECLARE DEAD.
+`TO-DO: INVESTIGAR MODO MUERTE EN FACEBOOK Y O GOOGLE. DECLARE DEAD.`
 
 Quise registrar una cuenta en Mega.nz para tener 50gb de backup sólo para mi viejo, pero no puedo recibir mails en su cuenta, así que usé un mail mio (no quería mezclar cuentas y usar su mail para sus cuentas... cuentas _póstumas_).
 
