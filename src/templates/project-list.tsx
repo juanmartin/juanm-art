@@ -86,7 +86,7 @@ const ProjectIndex = ({
                   <GatsbyImage
                     alt={node.frontmatter.title}
                     image={featuredImage}
-                    className="h-64 md:h-40 -mb-10 transition duration-125 ease-in-out
+                    className="h-64 w-full md:h-40 -mb-10 transition duration-125 ease-in-out
                 mix-blend-hard-multiply filter opacity-80 group-hover:opacity-100" />
                 </div>
 
