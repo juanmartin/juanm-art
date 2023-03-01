@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { scale, rhythm } from "../utils/typography"
+import { scale } from "../utils/typography"
 import Typed from "typed.js"
 
 import Footer from "./footer"
