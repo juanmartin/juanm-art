@@ -27,6 +27,7 @@
     "@mdx-js/react": "^1.6.21",
     "autoprefixer": "^10.2.5",
     "caniuse-lite": "^1.0.30001716",
+    "caniuse-lite": "^1.0.30001208",
     "gatsby": "^3.0.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
@@ -51,7 +52,6 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "mdx-embed": "0.0.14",
-    "postcss": "^8.2.10",
     "prismjs": "^1.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -68,12 +68,15 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
     "prettier": "2.1.2",
-    "tailwindcss": "^2.1.1"
+    "tailwindcss": "^3.2.7"
   },
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "prod": "gatsby build && gatsby serve",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run dev",
     "serve": "gatsby serve",

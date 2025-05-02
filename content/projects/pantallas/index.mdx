@@ -9,14 +9,14 @@ embeddedImages:
 - pantallas-login.png
 - pantallas-dashboard.png
 ---
-import Img from 'gatsby-image'
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 import { FaHeart, FaClock } from "react-icons/fa"
 import { GoRepoForked } from "react-icons/go"
 
 
 <div className="md:flex flex-row">
-  <Img fluid={props.embeddedImages.image1.fluid} alt="Login Screenshot" className="w-full mr-3 mb-2" />
-  <Img fluid={props.embeddedImages.image2.fluid} alt="Dashboard Screenshot" className="w-full mb-2" />
+  <GatsbyImage image={getImage(props.embeddedImages.image1)} alt="Login Screenshot" className="w-full mr-3 mb-2" />
+  <GatsbyImage image={getImage(props.embeddedImages.image2)} alt="Dashboard Screenshot" className="w-full mb-2" />
 </div>
 
 I was asked to integrate new features to an existing _pair_ of applications. These are two companion apps, one is the admin panel on which the user is able to upload media files, then generate playlists of the content and finally assign these playlists to your available devices. These devices then run the _other_ app, which is just a Player for this content. In both of them you are asked to log in so that all your content and settings are saved.
@@ -24,7 +24,7 @@ I was asked to integrate new features to an existing _pair_ of applications. The
 
 ## Uses
 
-This system is intended to be used to manage your screens remotely. Say you own a big ad billboard near the highway which has an enormous LED display. You could just hook a **Rasberry Pi** (with some mobile internet maybe) and control what to show according to your client's schedule for ad time. Set up once and you're done. The player will automatically download the media files and play them according to the selected playlist.
+This system is intended to be used to manage your screens remotely. Say you own a big ad billboard near the highway which has an enormous LED display. You could just hook a **Raspberry Pi** (with some mobile internet maybe) and control what to show according to your client's schedule for ad time. Set up once and you're done. The player will automatically download the media files and play them according to the selected playlist.
 
 ![Player Settings Screenshot](./pantallas-player.png)
 

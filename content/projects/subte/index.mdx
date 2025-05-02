@@ -18,7 +18,7 @@ Junto a [@piluxt](https://www.instagram.com/piluxt/) y la gente de [Zenta](http:
 
 ## Objetivo
 
-El sistema consiste en conectar los tableros de los medios de elevación para que reporten su estado a la nube. De ahi la gente de la Ciudad puede detectar fallas o avisar a los usuarios cuando alguna estaclera o asensor no estén disponibles.
+El sistema consiste en conectar los tableros de los medios de elevación para que reporten su estado a la nube. De ahi la gente de la Ciudad puede detectar fallas o avisar a los usuarios cuando alguna escalera o ascensor no estén disponibles.
 
 ## Tech
 
@@ -26,7 +26,7 @@ Dado que el gobierno argentino tiene un convenio con Microsoft, utilizamos Azure
 
 ### Arquitectura
 
-Las escaleras o asensores cuentan con una placa de control que tiene unas salidas para reportar el estado. Si mal no recuerdo mandan 5v cada una, eso lo lee la placa que diseñó Pilu y manda la data a través de un transmisor por LoRa a un Conduit (una suerte de router LoRa que centraliza la data), ambos de la marca Multi-Tech.
+Las escaleras o ascensores cuentan con una placa de control que tiene unas salidas para reportar el estado. Si mal no recuerdo mandan 5v cada una, eso lo lee la placa que diseñó Pilu y manda la data a través de un transmisor por LoRa a un Conduit (una suerte de router LoRa que centraliza la data), ambos de la marca Multi-Tech.
 
 El Conduit device se conecta a la red local del subte para impactar contra el Edge device (Raspberry Pi) que se encuentra en la terminal (punta) de la línea, en nuestro caso la C sería en Constitución.
 

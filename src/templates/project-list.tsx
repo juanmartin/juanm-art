@@ -77,16 +77,17 @@ const ProjectIndex = ({
             >
               <article
                 key={node.fields.slug}
-                className="md:w-72 h-full p-3 transition duration-200 ease-in-out 
-              hover:shadow-3xl shadow-close rounded 
-              hover:border-red-400 border-opacity-5 hover:border-opacity-100"
+                className="md:w-72 h-full p-3 transition duration-200 ease-in-out group
+              hover:shadow-3xl shadow-close rounded border-2 border-solid border-transparent
+              focus:border-red-400 active:shadow-red-400 border-opacity-5 hover:border-opacity-100 group-hover:opacity-100"
               >
 
-                <div className="group bg-gradient-to-br from-red-200 to-orange-300">
+                <div className="group bg-gradient-to-br from-red-200 to-orange-300 h-64 md:h-40 -mb-10">
                   <GatsbyImage
+                    alt={node.frontmatter.title}
                     image={featuredImage}
-                    className="h-64 md:h-40 -mb-10 transition duration-125 ease-in-out
-                mix-blend-hard-multiply filter opacity-75 group-hover:filter-none" />
+                    className="h-64 w-full md:h-40 -mb-10 transition duration-125 ease-in-out
+                mix-blend-hard-multiply filter opacity-80 group-hover:opacity-100" />
                 </div>
 
                 <header>
@@ -94,7 +95,7 @@ const ProjectIndex = ({
                     style={{
                       marginBottom: rhythm(1 / 4),
                     }}
-                    className="group-hover:text-white"
+                    className=""
                   >
                     {title}
                   </h3>

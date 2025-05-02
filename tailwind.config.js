@@ -1,8 +1,10 @@
 module.exports = {
-  purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx", "./content/**/*.mdx", "./**/*.mdx"],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './content/**/*.{md,mdx}'],
   theme: {
-    colors: {
-      darkGray: "#0C0C0C"
+    extend: {
+      colors: {
+        darkGray: '#0C0C0C'
+      }
     },
     boxShadow: {
       sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -26,4 +28,7 @@ module.exports = {
     }
   },
   plugins: [],
+  corePlugins: {
+    preflight: false
+  },
 }

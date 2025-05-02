@@ -10,7 +10,7 @@ embeddedImages:
 - srz-screenshot.png
 ---
 
-import Img from "gatsby-image"
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
 [Modular música](http://modularmusica.com/) es una aplicación mobile para el proyecto de musicalización de [Soledad Rodriguez Zubieta](https://www.instagram.com/_srz).
 
@@ -23,6 +23,6 @@ Estamos en proceso burocrático de subir al AppStore y Google Play, pero la app 
 Aquí unas capturas:
 
 <div className="md:flex flex-row" >
-    <Img fluid={props.embeddedImages.image1.fluid} alt="Modular Login Screenshot" className="w-full mr-5 mb-2" />
-    <Img fluid={props.embeddedImages.image2.fluid} alt="Modular Login Screenshot" className="w-full mb-2" />
+    <GatsbyImage image={getImage(props.embeddedImages.image1)} alt="Modular Login Screenshot" className="w-full mr-5 mb-2" />
+    <GatsbyImage image={getImage(props.embeddedImages.image2)} alt="Modular Login Screenshot 2" className="w-full mb-2" />
 </div>

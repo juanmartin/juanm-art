@@ -23,6 +23,9 @@ const ProjectPostTemplate = ({ data, pageContext, location }) => {
       return images
     }, {})
 
+    console.log('embeddedImages', embeddedImages);
+    console.log('embeddedImagesByKey', embeddedImagesByKey);
+
   return (
     <Layout location={location} title={siteMetadata.title}>
       <Seo
@@ -112,7 +115,7 @@ export const pageQuery = graphql`query ProjectPostBySlug($slug: String!) {
             height
             src
           }
-          gatsbyImageData(quality: 90, width: 410, layout: CONSTRAINED)
+          gatsbyImageData(quality: 90)
         }
       }
     }
