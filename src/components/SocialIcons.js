@@ -38,7 +38,7 @@ const SocialIcons = () => {
         </li>
         <li className="mr-3">
           <a
-            href="https://maynada.bandcamp.com/"
+            href="https://jaun.bandcamp.com/"
             target="_blank"
             rel="noreferrer"
           >
