@@ -178,6 +178,6 @@ module.exports = {
     "gatsby-plugin-dark-mode",
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
-    // `gatsby-plugin-mdx-embed`,
+    // `gatsby-plugin-mdx-embed`, // this is commented/removed porque ya está incluido en gatsby-browser.js
   ],
 }
