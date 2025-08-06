@@ -15,6 +15,8 @@ Una operación recurrente en mi trabajo es extraer el sentido sobre determinados
 
 Utilicé muchas herramientas (IA, análisis de datos, de audio, visualización) con un enfoque a veces no tan convencional en un camino que duró más o menos un año, y que incluyó la creación de un sitio web para presentar como escrito relatando el desarrollo y los diferentes resultados que fueron surgiendo en el proceso. También hice una versión impresa con QRs para acceder a las piezas multimedia.
 
+Agrego que en este escrito hago cierta cronología de mi recorrido por la carrera con algunas piezas que hice, por lo que también funciona como archivo.
+
 Check it: <a href="https://tfg.juanm.art/" target="_blank" rel="noopener noreferrer">Un recorrido tecno-sonoro hacia el habla asémica</a>.
 
 <div className="flex flex-col md:flex-row gap-4 mb-4">
