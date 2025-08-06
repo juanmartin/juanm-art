@@ -65,11 +65,11 @@ const SocialIcons = () => {
         </li>
         <li className="mr-3">
           <a
-            href={"https://twitter.com/" + social.twitter}
+            href={"https://x.com/" + social.twitter}
             target="_blank"
             rel="noreferrer"
           >
-            <FaTwitter alt="Twitter" className="no-underline" style={{float:'left'}} />
+            <FaTwitter alt="X / Twitter" className="no-underline" style={{float:'left'}} />
           </a>
         </li>
         <li className="mr-3">
